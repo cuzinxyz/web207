@@ -1,0 +1,382 @@
+<!-- Slideshow -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{$index}}" ng-class="{'active': $index == 0}" aria-label="Slide {{$index + 1}}" ng-repeat="banner in bannerData"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item" ng-class="{'active': $index == 0}" ng-repeat="banner in bannerData">
+      <img class="d-block w-100" ng-src="{{banner.banner_url}}" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Hanoi</h5>
+        <p>Ngàn năm văn hiến</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- best seller -->
+<div class="bg-body-tertiary my-6">
+  <div class="container fs-5 mb-3 fw-bold">Best Seller</div>
+
+  <div class="slider shadow-md" angular-slick>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://fastbootstrap.com/images/cards/3.jpg"
+              class="img-fluid rounded-start h-100"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="line-clamp-2 card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New collection -->
+<div class="container">
+  <div class="fs-5 mb-3 fw-bold">New Collection</div>
+
+  <!-- Danh sach san pham -->
+  <div
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-4 products"
+    style="row-gap: 20px"
+  >
+    <div class="col">
+      <div class="card shadow-md">
+        <div
+          class="card-header d-flex align-items-center"
+          style="padding: 10px 12px 6px"
+        >
+          <!-- <span class="avatar text-bg-primary avatar-lg fs-5">R</span> -->
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-fire text-danger fw-bold"></i>
+            <h5 class="mb-0 fs-sm line-clamp-1">Shrimp and Chorizo Paella</h5>
+          </div>
+        </div>
+        <img
+          src="https://fastbootstrap.com/images/cards/2.jpg"
+          class="card-img-top"
+          alt="green iguana"
+        />
+        <div class="card-body" style="padding: 6px 12px">
+          <p class="card-text card-desc line-clamp-2">
+            This impressive paella is a perfect party dish and a fun meal to
+            cook together with your guests. Add 1 cup of frozen peas along with
+            the mussels, if you like.
+          </p>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-between"
+          style="padding: 6px 0 6px 12px !important"
+        >
+          <a href="#!/product">
+            <button class="btn btn-sm btn-default">Xem chi tiết</button>
+          </a>
+          <button class="btn btn-subtle" type="button">
+            <i class="bi bi-cart-plus-fill fs-5 text-discovery"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-md">
+        <div
+          class="card-header d-flex align-items-center"
+          style="padding: 10px 12px 6px"
+        >
+          <!-- <span class="avatar text-bg-primary avatar-lg fs-5">R</span> -->
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-fire text-danger fw-bold"></i>
+            <h5 class="mb-0 fs-sm line-clamp-1">Shrimp and Chorizo Paella</h5>
+          </div>
+        </div>
+        <img
+          src="https://fastbootstrap.com/images/cards/2.jpg"
+          class="card-img-top"
+          alt="green iguana"
+        />
+        <div class="card-body" style="padding: 6px 12px">
+          <p class="card-text card-desc line-clamp-2">
+            This impressive paella is a perfect party dish and a fun meal to
+            cook together with your guests. Add 1 cup of frozen peas along with
+            the mussels, if you like.
+          </p>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-between"
+          style="padding: 6px 0 6px 12px !important"
+        >
+          <a href="#!/product">
+            <button class="btn btn-sm btn-default">Xem chi tiết</button>
+          </a>
+          <button class="btn btn-subtle" type="button">
+            <i class="bi bi-cart-plus-fill fs-5 text-discovery"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-md">
+        <div
+          class="card-header d-flex align-items-center"
+          style="padding: 10px 12px 6px"
+        >
+          <!-- <span class="avatar text-bg-primary avatar-lg fs-5">R</span> -->
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-fire text-danger fw-bold"></i>
+            <h5 class="mb-0 fs-sm line-clamp-1">Shrimp and Chorizo Paella</h5>
+          </div>
+        </div>
+        <img
+          src="https://fastbootstrap.com/images/cards/2.jpg"
+          class="card-img-top"
+          alt="green iguana"
+        />
+        <div class="card-body" style="padding: 6px 12px">
+          <p class="card-text card-desc line-clamp-2">
+            This impressive paella is a perfect party dish and a fun meal to
+            cook together with your guests. Add 1 cup of frozen peas along with
+            the mussels, if you like.
+          </p>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-between"
+          style="padding: 6px 0 6px 12px !important"
+        >
+          <a href="#!/product">
+            <button class="btn btn-sm btn-default">Xem chi tiết</button>
+          </a>
+          <button class="btn btn-subtle" type="button">
+            <i class="bi bi-cart-plus-fill fs-5 text-discovery"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-md">
+        <div
+          class="card-header d-flex align-items-center"
+          style="padding: 10px 12px 6px"
+        >
+          <!-- <span class="avatar text-bg-primary avatar-lg fs-5">R</span> -->
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-fire text-danger fw-bold"></i>
+            <h5 class="mb-0 fs-sm line-clamp-1">Shrimp and Chorizo Paella</h5>
+          </div>
+        </div>
+        <img
+          src="https://fastbootstrap.com/images/cards/2.jpg"
+          class="card-img-top"
+          alt="green iguana"
+        />
+        <div class="card-body" style="padding: 6px 12px">
+          <p class="card-text card-desc line-clamp-2">
+            This impressive paella is a perfect party dish and a fun meal to
+            cook together with your guests. Add 1 cup of frozen peas along with
+            the mussels, if you like.
+          </p>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-between"
+          style="padding: 6px 0 6px 12px !important"
+        >
+          <a href="#!/product">
+            <button class="btn btn-sm btn-default">Xem chi tiết</button>
+          </a>
+          <button class="btn btn-subtle" type="button">
+            <i class="bi bi-cart-plus-fill fs-5 text-discovery"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-md">
+        <div
+          class="card-header d-flex align-items-center"
+          style="padding: 10px 12px 6px"
+        >
+          <!-- <span class="avatar text-bg-primary avatar-lg fs-5">R</span> -->
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-fire text-danger fw-bold"></i>
+            <h5 class="mb-0 fs-sm line-clamp-1">Shrimp and Chorizo Paella</h5>
+          </div>
+        </div>
+        <img
+          src="https://fastbootstrap.com/images/cards/2.jpg"
+          class="card-img-top"
+          alt="green iguana"
+        />
+        <div class="card-body" style="padding: 6px 12px">
+          <p class="card-text card-desc line-clamp-2">
+            This impressive paella is a perfect party dish and a fun meal to
+            cook together with your guests. Add 1 cup of frozen peas along with
+            the mussels, if you like.
+          </p>
+        </div>
+        <div
+          class="card-footer d-flex justify-content-between"
+          style="padding: 6px 0 6px 12px !important"
+        >
+          <a href="#!/product">
+            <button class="btn btn-sm btn-default">Xem chi tiết</button>
+          </a>
+          <button class="btn btn-subtle" type="button">
+            <i class="bi bi-cart-plus-fill fs-5 text-discovery"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

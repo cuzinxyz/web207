@@ -1,0 +1,63 @@
+<div class="container bg-white my-5 rounded p-3 shadow-md">
+  <div class="mb-3 d-flex align-items-center justify-content-between">
+    <h5 class="m-0">Danh Mục</h5>
+    <button class="btn btn-sm btn-success" ng-click="addCategory()">Thêm danh mục</button>
+  </div>
+  <table class="table table-striped-columns">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên danh mục</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Danh mục 1</td>
+        <td>
+          <button ng-click="addCategory()" class="btn btn-sm">sửa</button><button onclick="return confirm('Bạn có chắc muốn xoá không?')" class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Danh mục 2</td>
+        <td>
+          <button ng-click="addCategory()" class="btn btn-sm">sửa</button><button onclick="return confirm('Bạn có chắc muốn xoá không?')" class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Danh mục 3</td>
+        <td>
+          <button ng-click="addCategory()" class="btn btn-sm">sửa</button><button onclick="return confirm('Bạn có chắc muốn xoá không?')" class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="categoryModalLabel">Danh Mục</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="categoryForm">
+          <div class="mb-3">
+            <label for="categoryName" class="form-label">Tên danh mục</label>
+            <input type="text" class="form-control" id="categoryName" required>
+          </div>
+          <input type="hidden" id="categoryId">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-primary" id="saveCategory">Lưu</button>
+      </div>
+    </div>
+  </div>
+</div>

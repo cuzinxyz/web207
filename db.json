@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "product_name": "Gà KFC",
+      "price": 230,
+      "description": "lorem ispum products description",
+      "category_id": 1,
+      "product_image": "https://img.cc/avatar",
+      "created_at": "20/11/2023"
+    },
+    {
+      "id": "2",
+      "product_name": "Bánh bao chay",
+      "price": 230,
+      "description": "lorem ispum products description",
+      "category_id": 1,
+      "product_image": "https://img.cc/avatar",
+      "created_at": "20/11/2023"
+    }
+  ],
+  "categories": [
+    { "id": "1", "category_name": "Đồ chay" },
+    { "id": "2", "category_name": "Đồ mặn" }
+  ],
+  "ordered": {},
+  "banners": [
+    {
+      "id": "1",
+      "banner_url": "https://images.pexels.com/photos/219692/pexels-photo-219692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "id": "2",
+      "banner_url": "https://images.pexels.com/photos/18789718/pexels-photo-18789718/free-photo-of-downtown-illuminated-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  ]
+}

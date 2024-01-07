@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASM</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/app.css" />
+  </head>
+  <body ng-app="myApp">
+    <header class="bg-white mx-auto">
+      <nav class="container navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarUnderlineExample"
+            aria-controls="navbarExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand header-logo" href="#">Angular JS</a>
+          <div class="collapse navbar-collapse" id="navbarUnderlineExample">
+            <ul class="navbar-nav navbar-nav-underline">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Pages</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#!/products">Products</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#!/checkout"
+                      >Checkout page</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#!/product"
+                      >Product detail page</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="javascript:void(0)"
+                      ng-click="myCartModal = true"
+                      >Cart page</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Admin</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#!/admin-product">Products</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#!/admin-category"
+                      >Category</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#!/admin-order"
+                      >Order</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center ms-auto">
+              <button
+                onclick="window.location.href='#!/login'"
+                type="button"
+                class="btn btn-default px-3 me-2"
+              >
+                Đăng nhập
+              </button>
+              <button
+                onclick="window.location.href='#!/register'"
+                type="button"
+                class="btn btn-primary me-3"
+              >
+                Đăng ký miễn phí
+              </button>
+
+              <a
+                class="text-white rounded btn btn-dark"
+                href="javascript:void(0)"
+                ng-click="myCartModal = true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-cart2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="modal show fade modalCart"
+      id="miniCartModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      ng-show="myCartModal"
+      style="display: block"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered animate__animated animate__bounceIn"
+        role="document"
+      >
+        <div class="modal-content border-0" style="border-radius: 16px">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Your Shopping Cart
+            </h5>
+            <button
+              type="button"
+              class="closeCart border-0 rounded d-flex"
+              data-dismiss="modal"
+              aria-label="Close"
+              ng-click="myCartModal = false"
+              style="width: 30px; height: 30px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body" style="max-height: 60vh; overflow: auto">
+            <table class="table table-image">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="miniCartBooks">
+                Bạn chưa đặt đơn hàng nào cả!
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-end">
+              <h5>
+                Total:
+                <span class="price text-success" id="cartSubTotal">0</span>
+              </h5>
+            </div>
+          </div>
+          <div class="modal-footer border-top-1 d-flex justify-content-between">
+            <button
+              type="button"
+              class="btn btn-sm btn-light closeCart"
+              data-dismiss="modal"
+              ng-click="myCartModal = false"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              id="checkout"
+              class="btn btn-outline-success"
+              disabled="disabled"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <ng-view></ng-view>
+    </main>
+
+    <div class="bg-white">
+      <footer
+        class="container d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+          >
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary"
+            >© 2024, Angular JS</span
+          >
+        </div>
+      </footer>
+    </div>
+
+    <!-- JS Library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- AngularJS Library  -->
+    <script src="./assets/js/angular.js"></script>
+    <script src="./assets/js/angular-route.min.js"></script>
+    <!-- AngularJS Controllers  -->
+    <script src="./app/controllers/HomeController.js"></script>
+    <script src="./app/controllers/AdminController.js"></script>
+    <!-- config angular -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Bootstrap JS  -->
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>

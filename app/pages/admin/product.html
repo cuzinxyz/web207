@@ -1,0 +1,162 @@
+<div class="container bg-white my-5 rounded p-3 shadow-md">
+  <div class="mb-3 d-flex align-items-center justify-content-between">
+    <h5 class="m-0">Sản phẩm</h5>
+    <button class="btn btn-sm btn-success" ng-click="addProduct()">Thêm sản phẩm</button>
+  </div>
+  <table class="table table-striped-columns">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Hình ảnh</th>
+        <th scope="col">Tên sản phẩm</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Danh mục</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>
+            <img src="https://i.pinimg.com/564x/68/5b/e8/685be8b8ac428f30528b7e6381de5d10.jpg" width="100" alt="">
+        </td>
+        <td>Sản phẩm 1</td>
+        <td>230</td>
+        <td>Đồ mặn</td>
+        <td>
+          <button ng-click="viewProduct()" class="btn btn-sm btn-dark">xem</button
+            >
+          <button ng-click="addProduct()" class="btn btn-sm">sửa</button
+          ><button class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+      
+      <tr>
+        <th scope="row">2</th>
+        <td>
+            <img src="https://i.pinimg.com/564x/68/5b/e8/685be8b8ac428f30528b7e6381de5d10.jpg" width="100" alt="">
+        </td>
+        <td>Sản phẩm 2</td>
+        <td>130</td>
+        <td>Đồ chay</td>
+        <td>
+          <button ng-click="viewProduct()" class="btn btn-sm btn-dark">xem</button
+            >
+          <button ng-click="addProduct()" class="btn btn-sm">sửa</button
+          ><button class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>
+            <img src="https://i.pinimg.com/564x/68/5b/e8/685be8b8ac428f30528b7e6381de5d10.jpg" width="100" alt="">
+        </td>
+        <td>Sản phẩm 3</td>
+        <td>430</td>
+        <td>Đồ mặn</td>
+        <td>
+          <button ng-click="viewProduct()" class="btn btn-sm btn-dark">xem</button
+            >
+          <button ng-click="addProduct()" class="btn btn-sm">sửa</button
+          ><button class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>
+            <img src="https://i.pinimg.com/564x/68/5b/e8/685be8b8ac428f30528b7e6381de5d10.jpg" width="100" alt="">
+        </td>
+        <td>Sản phẩm 4</td>
+        <td>630</td>
+        <td>Đồ mặn</td>
+        <td>
+          <button ng-click="viewProduct()" class="btn btn-sm btn-dark">xem</button
+            >
+          <button ng-click="addProduct()" class="btn btn-sm">sửa</button
+          ><button class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- View Product Modal -->
+<div class="modal fade" id="productViewModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Xem sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Sản phẩm: </strong> 
+            San pham 1
+          </li>
+          <li class="list-group-item">
+            <strong>
+              Hình ảnh: 
+            </strong>
+            <img src="/assets/images/prd1.jpg" class="rounded" width="100" alt="">
+          </li>
+          <li class="list-group-item">
+            <strong>
+              Giá: 
+            </strong>
+            230 $
+          </li>
+          <li class="list-group-item">
+            <strong>Danh mục: </strong>
+            Danh mục 1
+          </li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-primary" id="saveCategory">Lưu</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Danh Mục</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="categoryForm">
+          <div class="mb-3">
+            <label for="categoryName" class="form-label">Tên sản phẩm</label>
+            <input type="text" class="form-control" id="productName" required>
+          </div>
+          <div class="mb-3">
+            <label for="productImage" class="form-label">Hình ảnh</label>
+            <input type="text" class="form-control" id="productImage" required>
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label">Giá</label>
+            <input type="number" class="form-control" id="productPrice" required>
+          </div>
+          <div class="mb-3">
+            <label for="productCategory" class="form-label">Giá</label>
+            <select class="form-select" id="productCategory" required>
+              <option value="" selected>Danh mục 1</option>
+            </select>
+          </div>
+
+          <input type="hidden" id="productId">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <button type="button" class="btn btn-primary" id="saveCategory">Lưu</button>
+      </div>
+    </div>
+  </div>
+</div>

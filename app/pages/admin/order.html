@@ -1,0 +1,178 @@
+<div class="container bg-white my-5 rounded p-3 shadow-md">
+  <div class="mb-3 d-flex align-items-center justify-content-between">
+    <h5 class="m-0">Đơn hàng</h5>
+  </div>
+  <table class="table table-striped-columns">
+    <thead>
+      <tr>
+        <th scope="col">Mã đơn</th>
+        <th scope="col">Sản phẩm</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Thành tiền</th>
+        <th scope="col">Danh mục</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td class="fw-bold">Sản phẩm 1</td>
+        <td>Số lượng 1</td>
+        <td class="text-danger text-italic">Thành tiền 1</td>
+        <td>Danh mục 1</td>
+        <td>
+          <button ng-click="viewOrder()" class="btn btn-sm btn-dark">xem</button
+          ><button ng-click="orderEditModal()" class="btn btn-sm">sửa</button
+          ><button class="btn btn-sm btn-danger">xoá</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Add Modal -->
+<div
+  class="modal fade"
+  id="orderModal"
+  tabindex="-1"
+  aria-labelledby="orderModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Sửa đơn hàng</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="orderEditForm">
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="productName" class="form-label">Sản phẩm: </label>
+            <span class="fw-bold">Sản phẩm 1</span>
+          </div>
+
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="productName" class="form-label">Hình ảnh: </label>
+            <img src="/assets/images/prd1.jpg" width="100" alt="" />
+          </div>
+
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="productName" class="form-label">Số lượng: </label>
+            <input type="number" name="" value="1" id="">
+          </div>
+
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="productName" class="form-label">Thành tiền: </label>
+            <span class="fw-bold">100 $</span>
+          </div>
+
+          <div class="mb-3 d-flex justify-content-between align-items-center">
+            <label for="categoryName" class="form-label">Danh mục: </label>
+            <span class="fw-bold">Danh mục 1</span>
+          </div>
+
+          <input type="hidden" id="orderId" />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-sm btn-danger"
+          data-bs-dismiss="modal"
+        >
+          Xoá đơn
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-default"
+          data-bs-dismiss="modal"
+        >
+          Đóng
+        </button>
+        <button type="button" class="btn btn-sm btn-primary" id="saveCategory">
+          Xác nhận đơn hàng
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- View Modal -->
+<div
+  class="modal fade"
+  id="orderViewModal"
+  tabindex="-1"
+  aria-labelledby="orderViewModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderViewModalLabel">Đơn hàng</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Sản phẩm: </strong>
+            San pham 1
+          </li>
+          <li class="list-group-item">
+            <strong> Hình ảnh: </strong>
+            <img
+              src="/assets/images/prd1.jpg"
+              class="rounded"
+              width="100"
+              alt=""
+            />
+          </li>
+          <li class="list-group-item">
+            <strong> Số lượng: </strong>
+            2
+          </li>
+          <li class="list-group-item">
+            <strong> Giá: </strong>
+            230 $
+          </li>
+          <li class="list-group-item">
+            <strong> Thành tiền: </strong>
+            460 $
+          </li>
+          <li class="list-group-item">
+            <strong>Danh mục: </strong>
+            Danh mục 1
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-sm btn-danger"
+          data-bs-dismiss="modal"
+        >
+          Xoá đơn
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-default"
+          data-bs-dismiss="modal"
+        >
+          Đóng
+        </button>
+        <button type="button" class="btn btn-sm btn-primary" id="saveCategory">
+          Xác nhận đơn hàng
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
